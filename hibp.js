@@ -62,7 +62,7 @@ function hibpCheck(pwd){
             var result = false;
             for(index in resp){
                 // Check if the line matches the rest of the hash
-                if(resp[index].substring(0, 35) == hashSub){
+                if(resp[index].substring(0, 35) == hashSub && resp[index].split(':')[1] != 0){
                     result = true;
                     break; // If found no need to continue the loop
                 }
